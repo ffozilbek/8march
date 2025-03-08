@@ -1,6 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
   const btn = document.querySelector(".button"),
-    modal = document.querySelector(".modal");
+    modal = document.querySelector(".modal"),
+    container = document.querySelector(".container");
   const audio = new Audio("audio.mp3");
   audio.loop = true;
 
@@ -11,6 +12,8 @@ window.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         modal.classList.remove("active");
         modal.style.display = "none";
+        document.body.style.overflow = "scroll";
+        container.style.display = "block";
       }, 600);
     });
   }
